@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container py-5">
+        <!-- Input Section -->
+        <div id="inputSection" class="mb-4">
+            <div class="form-group">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" class="form-control" placeholder="Masukan Nama Kamu">
+            </div>
+
+            <div class="form-group">
+                <label for="class">Kelas:</label>
+                <input type="text" id="class" class="form-control" placeholder="Masukan Kelas Kamu">
+            </div>
+
+            <div class="form-group">
+                <label for="absen">Absen:</label>
+                <input type="text" id="absen" class="form-control" placeholder="Masukan Nomer Absen Kamu">
+            </div>
+
+            <button id="startQuiz" class="btn btn-primary">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="card" id="box">
+            <div class="card-header">
+                <h1>Quiz Website by Zxcoders ( Dika Project )</h1>
+            </div>
+            <div class="card-body">
+                <h2 id="quesBox">Template Quiz</h2>
+                <div class="options" id="options">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="option" id="option1" value="a">
+                        <label class="form-check-label" for="option1">option 1</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="option" id="option2" value="b">
+                        <label class="form-check-label" for="option2">option 2</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="option" id="option3" value="c">
+                        <label class="form-check-label" for="option3">option 3</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="option" id="option4" value="d">
+                        <label class="form-check-label" for="option4">option 4</label>
+                    </div>
+                </div>
+                <button class="btn btn-success mt-3" id="submit">Submit</button>
+                <div class="result mt-4">
+                    <h4 id="answer-result"></h4>
+                    <h4 id="score"></h4>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="quizEndModal" tabindex="-1" role="dialog" aria-labelledby="quizEndModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="quizEndModalLabel">Quiz Ended</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Quiz Ini Telah Selesai Dan Ini Nilaimu. <span id="finalScore"></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="playAgain">Play Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
